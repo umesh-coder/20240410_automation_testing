@@ -22,15 +22,24 @@ public class RedbusTesting {
         WebElement help = driver.findElement(By.xpath("//span[.='Help']"));
 
         // Locating the account related element on the webpage
-        WebElement account = driver.findElement(By.xpath("//DIV[@class='rb_main_secondary_item  link']/self::DIV"));
+        WebElement account = driver.findElement(By.xpath("//SPAN[@class='name_rb_secondary_item'][text()='Account']/.."));
 
+        // Locating the "Show My Ticket" element on the webpage
+        WebElement showTicket = driver.findElement(By.xpath("//LI[@id='ticket_details']//SPAN[@class='header_dropdown_item_name'][text()='Show My Ticket']"));
+        
         // Performing a click action on the "Help" element
         actions.click(help).perform();
-
-        // Adding a delay to wait for the page to load (not recommended, used here for simplicity)
-        Thread.sleep(2000);
-
+        // Adding a delay to wait for the dropdown to appear
+        Thread.sleep(1900);
+        
         // Performing a click action on the account related element
         actions.click(account).perform();
+        // Adding a delay to wait for the dropdown to appear
+        Thread.sleep(2000);
+        
+        // Moving to the "Show My Ticket" element and clicking it
+        actions.moveToElement(showTicket).click().perform();
+        // Adding a delay to wait for the page to load (not recommended, used here for simplicity)
+        Thread.sleep(1500);
     }
 }

@@ -7,63 +7,50 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class ElementLocators {
-    public static void main(String[] args) throws InterruptedException {
-        // Initialize the WebDriver
-        WebDriver driver = new FirefoxDriver();
+	public static void main(String[] args) throws InterruptedException {
+		// Initialize the WebDriver
+		WebDriver driver = new FirefoxDriver();
 
-        try {
-            // Navigate to the provided webpage
-            driver.get("https://www.calculator.net/");
+		try {
+			// Navigate to the provided webpage
+			driver.get("https://www.calculator.net/");
 
 //            https://jqueryui.com/resources/demos/droppable/default.html
-            
-            // ID Locator
-            WebElement searchBarById = driver.findElement(By.id("calcSearchTerm"));
 
-            // Class Name Locator
-            WebElement homeListDivByClassName = driver.findElement(By.className("homelisttile"));
+			// ID Locator
+			WebElement searchBarById = driver.findElement(By.id("calcSearchTerm"));
 
-            // Name Locator (Not used in the provided HTML)
+			// Class Name Locator
+			WebElement homeListDivByClassName = driver.findElement(By.className("homelisttile"));
 
-            // Tag Name Locator
-            WebElement bodyTag = driver.findElement(By.tagName("body"));
+			// Name Locator (Not used in the provided HTML)
 
-            // Link Text Locator
-            WebElement aboutUsLinkByLinkText = driver.findElement(By.linkText("about us"));
+			// Tag Name Locator
+			WebElement bodyTag = driver.findElement(By.tagName("body"));
 
-            // Partial Link Text Locator (Not used in the provided HTML)
+			// Link Text Locator
+			WebElement aboutUsLinkByLinkText = driver.findElement(By.linkText("about us"));
 
-            // CSS Selector Locator (Not used in the provided HTML)
+			// Partial Link Text Locator (Not used in the provided HTML)
 
-            // XPath Locator
-            WebElement privacyPolicyLinkByXPath = driver.findElement(By.xpath("//a[contains(text(),'privacy policy')]"));
+			// CSS Selector Locator (Not used in the provided HTML)
 
-            // Print some information about the elements found
-            System.out.println("Search bar found by ID: " + searchBarById.getAttribute("name"));
-            System.out.println("Home list div found by Class Name: " + homeListDivByClassName.getText());
-            System.out.println("Body tag found by Tag Name: " + bodyTag.getTagName());
-            System.out.println("About Us link found by Link Text: " + aboutUsLinkByLinkText.getAttribute("href"));
-            System.out.println("Privacy Policy link found by XPath: " + privacyPolicyLinkByXPath.getAttribute("href"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            // Close the browser
-            driver.quit();
-        }
-        
+			// XPath Locator
+			WebElement privacyPolicyLinkByXPath = driver
+					.findElement(By.xpath("//a[contains(text(),'privacy policy')]"));
 
+			// Print some information about the elements found
+			System.out.println("Search bar found by ID: " + searchBarById.getAttribute("name"));
+			System.out.println("Home list div found by Class Name: " + homeListDivByClassName.getText());
+			System.out.println("Body tag found by Tag Name: " + bodyTag.getTagName());
+			System.out.println("About Us link found by Link Text: " + aboutUsLinkByLinkText.getAttribute("href"));
+			System.out.println("Privacy Policy link found by XPath: " + privacyPolicyLinkByXPath.getAttribute("href"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// Close the browser
+			driver.quit();
+		}
 
-
-
-        
-
-        
-        
-        
-     
-        
-        
-    }
-    }
-
-
+	}
+}
