@@ -9,42 +9,32 @@ import java.util.Iterator;
 
 import java.lang.String;
 
-
 import java.util.*;
 
 public class WindowTesting {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		
-	
-		
-//		driver.manage().window().maximize();
-//		String pw= driver.getWindowHandle();
-		
-		
+
 		WebDriver driver = new FirefoxDriver();
-		
-		
 		driver.get("https://www.redbus.com/");
 
-		driver.findElement(By.linkText("Help")).click();
-		Thread.sleep(3000);
-		
-//		Set<String> alw= driver.getWindowHandles();
-//		Iterator<String> it = alw.iterator();
-//		
-//		String pw = it.next();
-//		String cw= it.next();
-//		driver.switchTo().window(cw);
-		
-		Set<String> alw =driver.getWindowHandles();
-		Iterator<String> it = alw.iterator();
-		
-		
-		
-	
+		WebElement help = driver.findElement(By.linkText("Help"));
 
+		help.click();
+
+		Thread.sleep(3000);
+
+		Set<String> alw = driver.getWindowHandles();
+		Iterator<String> it = alw.iterator();
+
+		it.next();
+		
+		String cw = it.next();
+
+		driver.switchTo().window(cw);
+		WebElement close = driver.findElement(By.xpath("//i[@class='icon-close']/self::i"));
+
+		close.click();
 
 	}
 

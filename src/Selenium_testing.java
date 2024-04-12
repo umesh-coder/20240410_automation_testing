@@ -1,7 +1,3 @@
-
-
-
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.firefox.FirefoxDriver;
