@@ -1,8 +1,43 @@
-# 20240410_automation_testing
-In this Repositary Contain Learning of Basics Of Java And Selenium Testing
+# Automation Testing Repository
 
-1.It is also Basics Of Java Like OOPs Concept and Access modifiers 
-2. To Locate Element in the Webpage and various method like by class Name , Tag Name and Xpath
-3. To Test Various Actions like drag and Drop , Click and Move To Element of Various Website Like School , RedBus and Calculator
-4. To create Two Classes one for storing webElement and one for Call for reusability
-5. To Install and USe TestNg and Various annotations
+This repository contains learning materials for basics of Java and Selenium testing.
+
+## Contents
+
+1. **Basics of Java**: 
+    - Object-oriented programming concepts
+    - Access modifiers
+    
+2. **Locating Elements**:
+    - Methods for locating elements in web pages, such as:
+        - By class name
+        - By tag name
+        - By XPath
+    
+3. **Testing Various Actions**:
+    - Examples of testing various actions on different websites, including:
+        - Drag and drop
+        - Clicking
+        - Moving to elements
+    
+4. **Class Structure**:
+    - Creation of two classes:
+        - One for storing web elements
+        - One for reusability
+        
+5. **TestNG Integration**:
+    - Installation and usage of TestNG framework
+    - Demonstrating various annotations
+    
+## Usage
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your_username/automation_testing.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd automation_testing
+    ```
+
